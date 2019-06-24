@@ -6,7 +6,7 @@ There might be bugs, use the issue tracker if you find any.
 
 ## Introduction
 
-Ever wanted to make thousands of plat? Use [warframe.market](https://warframe.market) but need more features? So did I, so I made this. The Warframe.market Watcher is capable of keeping track of any user's sale/buy orders, checking if you were undercut, tracking all sales/bids for an item, and more!
+Ever wanted to make thousands of plat? Use [warframe.market](https://warframe.market) but need more features? So did I, so I made this. The Warframe.market Watcher is capable of keeping track of any user's sell/buy orders, checking if you were undercut, tracking all sales/bids for an item, and more!
 
 ## Features
 
@@ -16,6 +16,9 @@ Ever wanted to make thousands of plat? Use [warframe.market](https://warframe.ma
 - User order notifications if undercut and by how much
 - Based on orders where the user is online/in game
 - EN / PC only for now
+- Displays rep next to a user's name where applicable
+- 90 day / 48 hour averages for each item/rank
+- Automatically sorts by price where applicable
 
 ## Installation
 
@@ -48,3 +51,17 @@ optional arguments:
                         watch a user's sell orders (can specify multiple
                         users)
 ```
+
+## Screenshots
+
+### Multiple sellers:
+
+![](screenshots/multisales.png)
+
+### Item tracking:
+
+![](screenshots/item.png)
+
+### Buyer, item, and seller tracking:
+
+![](screenshots/allmodes.png)
