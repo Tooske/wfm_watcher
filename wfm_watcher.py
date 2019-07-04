@@ -1,10 +1,3 @@
-#!/usr/bin/python3
-
-# Part of https://github.com/snail23/wfm_watcher
-
-import argparse
-import colorclass
-import json
 import os
 import requests
 import sys
@@ -197,7 +190,7 @@ while True:
                             colorclass.Color(str(order['quantity'])),
                             colorclass.Color(str(int(round(stats[item_name][mod_rank]['buy_90_day']))) + 'p'),
                             colorclass.Color(str(int(round(stats[item_name][mod_rank]['buy_48_hr']))) + 'p'),
-                            colorclass.Color(str(order['platinum']) + 'p'),
+                            colorclass.Color(str(int(order['platinum'])) + 'p'),
                             colorclass.Color('{higreen}' + str(order['platinum'] - orders[item_name][mod_rank]['buy']['previous']) + 'p diff: yes{/green}' if ((order['id'] == orders[item_name][mod_rank]['buy']['id']) or (order['platinum'] == orders[item_name][mod_rank]['buy']['platinum'])) else '{hired}' + '[+' + str(orders[item_name][mod_rank]['buy']['user']['reputation']) + '] ' + orders[item_name][mod_rank]['buy']['user']['ingame_name'] + ': ' + str(orders[item_name][mod_rank]['buy']['platinum']) + 'p{/red}')
                         ])
 
@@ -257,7 +250,7 @@ while True:
                                     colorclass.Color(str(order['quantity'])),
                                     colorclass.Color(str(int(round(stats[item][mod_rank]['buy_90_day']))) + 'p'),
                                     colorclass.Color(str(int(round(stats[item][mod_rank]['buy_48_hr']))) + 'p'),
-                                    order['platinum'],
+                                    colorclass.Color(str(int(order['platinum']))),
                                 ])
 
                             elif order['order_type'] == 'sell':
@@ -268,7 +261,7 @@ while True:
                                     colorclass.Color(str(order['quantity'])),
                                     colorclass.Color(str(int(round(stats[item][mod_rank]['sell_90_day']))) + 'p'),
                                     colorclass.Color(str(int(round(stats[item][mod_rank]['sell_48_hr']))) + 'p'),
-                                    order['platinum'],
+                                    colorclass.Color(str(int(order['platinum']))),
                                 ])
 
                 buy_orders.sort(key=lambda order: order[5], reverse=True)
@@ -352,7 +345,7 @@ while True:
                             colorclass.Color(str(order['quantity'])),
                             colorclass.Color(str(int(round(stats[item_name][mod_rank]['sell_90_day']))) + 'p'),
                             colorclass.Color(str(int(round(stats[item_name][mod_rank]['sell_48_hr']))) + 'p'),
-                            colorclass.Color(str(order['platinum']) + 'p'),
+                            colorclass.Color(str(int(order['platinum'])) + 'p'),
                             colorclass.Color('{higreen}' + str(orders[item_name][mod_rank]['sell']['previous'] - order['platinum']) + 'p diff: yes{/green}' if ((order['id'] == orders[item_name][mod_rank]['sell']['id']) or (order['platinum'] == orders[item_name][mod_rank]['sell']['platinum'])) else '{hired}' + '[+' + str(orders[item_name][mod_rank]['sell']['user']['reputation']) + '] ' + orders[item_name][mod_rank]['sell']['user']['ingame_name'] + ': ' + str(orders[item_name][mod_rank]['sell']['platinum']) + 'p{/red}')
                         ])
 
