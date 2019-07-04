@@ -27,6 +27,7 @@ Ever wanted to make thousands of plat? Use [warframe.market](https://warframe.ma
 3. `pip3 install wheel`
 4. `pip3 install colorclass`
 5. `pip3 install terminaltables`
+6. `pip3 install requests`
 
 Run with `python3 wfm_watcher.py` or just `./wfm_watcher.py` on linux
 
