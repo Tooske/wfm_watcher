@@ -1,3 +1,10 @@
+#!/usr/bin/python3	
+
+# Part of https://github.com/snail23/wfm_watcher
+
+import argparse
+import colorclass
+import json
 import os
 import requests
 import sys
