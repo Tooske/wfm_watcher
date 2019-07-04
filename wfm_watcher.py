@@ -198,7 +198,7 @@ while True:
                             colorclass.Color(str(int(round(stats[item_name][mod_rank]['buy_90_day']))) + 'p'),
                             colorclass.Color(str(int(round(stats[item_name][mod_rank]['buy_48_hr']))) + 'p'),
                             colorclass.Color(str(int(order['platinum'])) + 'p'),
-                            colorclass.Color('{higreen}' + str(order['platinum'] - orders[item_name][mod_rank]['buy']['previous']) + 'p diff: yes{/green}' if ((order['id'] == orders[item_name][mod_rank]['buy']['id']) or (order['platinum'] == orders[item_name][mod_rank]['buy']['platinum'])) else '{hired}' + '[+' + str(orders[item_name][mod_rank]['buy']['user']['reputation']) + '] ' + orders[item_name][mod_rank]['buy']['user']['ingame_name'] + ': ' + str(orders[item_name][mod_rank]['buy']['platinum']) + 'p{/red}')
+                            colorclass.Color('{higreen}' + str(int(order['platinum'] - orders[item_name][mod_rank]['buy']['previous'])) + 'p diff: yes{/green}' if ((order['id'] == orders[item_name][mod_rank]['buy']['id']) or (order['platinum'] == orders[item_name][mod_rank]['buy']['platinum'])) else '{hired}' + '[+' + str(orders[item_name][mod_rank]['buy']['user']['reputation']) + '] ' + orders[item_name][mod_rank]['buy']['user']['ingame_name'] + ': ' + str(int(orders[item_name][mod_rank]['buy']['platinum'])) + 'p{/red}')
                         ])
 
                 buy_orders.sort(key=lambda order: order[0])
